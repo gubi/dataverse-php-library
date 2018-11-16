@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Dataverse API
+ * PHP Dataverse API - Files
  *
  * PHP Version 7.2.11
  *
@@ -13,6 +13,7 @@
  * A script for manage XML file and prepare data for Dataverse
  *
  * @package PHP Dataverse API
+ * @subpackage Files
  * @author Alessandro Gubitosi <a.gubitosi@cgiar.org>
  * @license
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
@@ -62,7 +63,7 @@ class Files extends Dataverse {
     }
 
     // Provenance
-    
+
     /**
      * Get Provenance JSON for an uploaded file
      */

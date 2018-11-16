@@ -1,10 +1,10 @@
 <?php
 /**
- * Bioversity AGROVOC Indexing
+ * PHP Dataverse API
  *
  * PHP Version 7.2.11
  *
- * @copyright 2018 Bioversity International (http://www.bioversityinternational.org/)
+ * @copyright 
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */

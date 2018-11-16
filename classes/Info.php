@@ -1,6 +1,6 @@
 <?php
 /**
- * PHP Dataverse API
+ * PHP Dataverse API - Info
  *
  * PHP Version 7.2.11
  *
@@ -13,6 +13,7 @@
  * A script for manage XML file and prepare data for Dataverse
  *
  * @package PHP Dataverse API
+ * @subpackage Info
  * @author Alessandro Gubitosi <a.gubitosi@cgiar.org>
  * @license
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
@@ -44,7 +45,7 @@ class Info extends Dataverse {
      * Get API Terms of Use URL
      */
     public static function get_api_terms() {
-        
+
     }
 }
 ?>
