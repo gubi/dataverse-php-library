@@ -66,6 +66,7 @@ class Dataverse {
         curl_setopt(self::$ch, CURLOPT_CONNECTTIMEOUT, 10);
         curl_setopt(self::$ch, CURLOPT_TIMEOUT, 10);
         curl_setopt(self::$ch, CURLOPT_VERBOSE, true);
+        curl_setopt(self::$ch, CURLOPT_HTTPHEADER, ["X-Dataverse-key:" . self::$apiKey]);
 
         $httpCode = curl_getinfo(self::$ch , CURLINFO_HTTP_CODE);
     }
