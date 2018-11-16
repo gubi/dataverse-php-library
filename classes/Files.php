@@ -23,7 +23,7 @@ class Files extends Dataverse {
     /**
      * Adding Files
      * NOTE: Files can be added via the native API but the operation is performed on the parent object, which is a dataset.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#adding-files
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#adding-files
      * @see Datasets::add_file()
      */
     // public static function add_file() {}
@@ -31,7 +31,7 @@ class Files extends Dataverse {
     /**
      * Accessing (downloading) files
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#accessing-downloading-files
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#accessing-downloading-files
      * @see http://guides.dataverse.org/en/latest/api/dataaccess.html
      * @method GET
      *
@@ -47,7 +47,7 @@ class Files extends Dataverse {
      *
      * Restrict or unrestrict an existing file where `persistentId` is the persistent id (DOI or Handle) of the file to restrict.
      * NOTE: Some Dataverse installations do not allow the ability to restrict files.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#restrict-files
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#restrict-files
      * @method PUT
      *
      * @param string                            $persistentId                   The Dataset persistent identifier
@@ -62,7 +62,7 @@ class Files extends Dataverse {
      *
      * Replace an existing file where pid is the persistent id (DOI or Handle) of the file.
      * NOTE: Metadata such as description and tags are not carried over from the file being replaced
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#replacing-files
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#replacing-files
      * @method POST
      *
      * @param string                            $id                             The file ID
@@ -81,7 +81,7 @@ class Files extends Dataverse {
      *
      * Reverse the tabular data ingest process performed on a file where `$id` is the database id of the file to process.
      * NOTE: This requires “super user” credentials
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#uningest-a-file
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#uningest-a-file
      * @method POST
      *
      * @param string                            $id                             The file ID
@@ -98,7 +98,7 @@ class Files extends Dataverse {
      * This API can be used on a file that was not ingested as tabular back when it was uploaded.
      * For example, a Stata v.14 file that was uploaded before ingest support for Stata 14 was added (in Dataverse v.4.9).
      * It can also be used on a file that failed to ingest due to a bug in the ingest plugin that has since been fixed (hence the name “re-ingest”).
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#reingest-a-file
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#reingest-a-file
      * @method POST
      *
      * @param string                            $id                             The file ID
@@ -115,7 +115,7 @@ class Files extends Dataverse {
     /**
      * Get Provenance JSON for an uploaded file
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#provenance
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#provenance
      * @method GET
      *
      * @param string                            $id                             The file ID
@@ -128,7 +128,7 @@ class Files extends Dataverse {
     /**
      * Get Provenance Description for an uploaded file
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#provenance
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#provenance
      * @method GET
      *
      * @param string                            $id                             The file ID
@@ -141,7 +141,7 @@ class Files extends Dataverse {
     /**
      * Create/Update Provenance JSON and provide related entity name for an uploaded file
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#provenance
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#provenance
      * @method POST
      *
      * @param string                            $id                             The file ID
@@ -154,7 +154,7 @@ class Files extends Dataverse {
     /**
      * Delete Provenance JSON for an uploaded file
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#provenance
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#provenance
      * @method DELETE
      *
      * @param string                            $id                             The file ID

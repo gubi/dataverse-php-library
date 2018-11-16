@@ -24,7 +24,7 @@ class Datasets extends Dataverse {
      * Get JSON Representation of a Dataset
      *
      * Show the dataset whose id is passed.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#get-json-representation-of-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#get-json-representation-of-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -43,7 +43,7 @@ class Datasets extends Dataverse {
      * Delete Dataset
      *
      * Delete the dataset whose id is passed
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-dataset
      * @method DELETE
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -56,7 +56,7 @@ class Datasets extends Dataverse {
     /**
      * List Versions of a Dataset
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-versions-of-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-versions-of-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -70,7 +70,7 @@ class Datasets extends Dataverse {
      * Get Version of a Dataset
      *
      * Show a version of the dataset. The Dataset also include any metadata blocks the data might have
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#get-version-of-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#get-version-of-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -86,7 +86,7 @@ class Datasets extends Dataverse {
      * Export Metadata of a Dataset in Various Formats
      *
      * Export the metadata of the current published version of a dataset in various formats.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#export-metadata-of-a-dataset-in-various-formats
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#export-metadata-of-a-dataset-in-various-formats
      * @method GET
      *
      * @param string                            $persistentId                   The Dataset persistent identifier
@@ -101,7 +101,7 @@ class Datasets extends Dataverse {
      * List Files in a Dataset
      *
      * Lists all the file metadata, for the given dataset and version
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-files-in-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-files-in-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -117,7 +117,7 @@ class Datasets extends Dataverse {
      * List All Metadata Blocks for a Dataset
      *
      * Lists all the metadata blocks and their content, for the given dataset and version:
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-all-metadata-blocks-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-all-metadata-blocks-for-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -133,7 +133,7 @@ class Datasets extends Dataverse {
      * List Single Metadata Block for a Dataset
      *
      * Lists the metadata block named __blockname__, for the given dataset and version
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-single-metadata-block-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-single-metadata-block-for-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -151,7 +151,7 @@ class Datasets extends Dataverse {
      * Update Metadata For a Dataset
      *
      * If a draft of the dataset already exists, the metadata of that draft is overwritten; otherwise, a new draft is created with this metadata.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#update-metadata-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#update-metadata-for-a-dataset
      * @method POST
      * @example http://guides.dataverse.org/en/latest/_downloads/dataset-update-metadata.json
      *
@@ -166,7 +166,7 @@ class Datasets extends Dataverse {
      * Edit Dataset Metadata
      *
      * Alternatively to replacing an entire dataset version with its JSON representation you may add data to dataset fields that are blank or accept multiple values with this method.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#edit-dataset-metadata
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#edit-dataset-metadata
      * @method POST
      * @example http://guides.dataverse.org/en/latest/_downloads/dataset-edit-metadata-sample.json
      *
@@ -186,7 +186,7 @@ class Datasets extends Dataverse {
      * Delete Dataset Metadata
      *
      * You may delete some of the metadata of a dataset version by supplying a file with a JSON representation of dataset fields that you would like to delete with the following
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-dataset-metadata
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-dataset-metadata
      * @method PUT
      * @example http://guides.dataverse.org/en/latest/_downloads/dataset-delete-author-metadata.json
      *
@@ -202,7 +202,7 @@ class Datasets extends Dataverse {
      *
      * Publishes the dataset whose id is passed.
      * If this is the first version of the dataset, its version number will be set to 1.0. Otherwise, the new dataset version number is determined by the most recent version number and the type parameter.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#publish-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#publish-a-dataset
      * @method POST
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -217,7 +217,7 @@ class Datasets extends Dataverse {
      * Delete Dataset Draft
      *
      * Deletes the draft version of dataset `$id`. Only the draft version can be deleted
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-dataset-draft
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-dataset-draft
      * @method DELETE
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -233,7 +233,7 @@ class Datasets extends Dataverse {
      * Sets the dataset field type to be used as the citation date for the given dataset (if the dataset does not include the dataset field type, the default logic is used).
      * The name of the dataset field type should be sent in the body of the reqeust.
      * Note that the dataset field used has to be a date field
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#set-citation-date-field-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#set-citation-date-field-for-a-dataset
      * @method PUT
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -247,7 +247,7 @@ class Datasets extends Dataverse {
      * Revert Citation Date Field to Default for Dataset
      *
      * Restores the default logic of the field type to be used as the citation date.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#revert-citation-date-field-to-default-for-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#revert-citation-date-field-to-default-for-dataset
      * @method DELETE
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -261,7 +261,7 @@ class Datasets extends Dataverse {
      * List Role Assignments for a Dataset
      *
      * List all the role assignments at the given dataset
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-role-assignments-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-role-assignments-for-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -275,7 +275,7 @@ class Datasets extends Dataverse {
      * Create a Private URL for a Dataset
      *
      * Create a Private URL (must be able to manage dataset permissions)
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#create-a-private-url-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#create-a-private-url-for-a-dataset
      * @method POST
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -288,7 +288,7 @@ class Datasets extends Dataverse {
     /**
      * Get the Private URL for a Dataset(if available)
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#get-the-private-url-for-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#get-the-private-url-for-a-dataset
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -301,7 +301,7 @@ class Datasets extends Dataverse {
     /**
      * Delete the Private URL from a Dataset (if it exists)
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-the-private-url-from-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-the-private-url-from-a-dataset
      * @method DELETE
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust) or the persistent identifier
@@ -315,7 +315,7 @@ class Datasets extends Dataverse {
      * Add a File to a Dataset
      *
      * Description and tags are optional
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#add-a-file-to-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#add-a-file-to-a-dataset
      * @method POST
      *
      * @param string                            $persistentId                   The Dataset persistent identifier
@@ -333,7 +333,7 @@ class Datasets extends Dataverse {
      * Submit a Dataset for Review
      *
      * When dataset authors do not have permission to publish directly, they can click the “Submit for Review” button in the web interface (see Dataset + File Management), or perform the equivalent operation via API
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#submit-a-dataset-for-review
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#submit-a-dataset-for-review
      * @see http://guides.dataverse.org/en/latest/user/dataset-management.html
      * @method POST
      *
@@ -350,7 +350,7 @@ class Datasets extends Dataverse {
      * After the curators or journal editors have reviewed a dataset that has been submitted for review (see “Submit for Review”, above) they can either choose to publish the dataset (see the `:publish` “action” above) or return the dataset to its authors.
      * In the web interface there is a “Return to Author” button (see Dataset + File Management), but the interface does not provide a way to explain why the dataset is being returned. There is a way to do this outside of this interface, however.
      * Instead of clicking the “Return to Author” button in the UI, a curator can write a “reason for return” into the database via API.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#return-a-dataset-to-author
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#return-a-dataset-to-author
      * @method POST
      * @example http://guides.dataverse.org/en/latest/_downloads/reason-for-return.json
      */
@@ -363,7 +363,7 @@ class Datasets extends Dataverse {
      * Link a Dataset
      *
      * Creates a link between a dataset and a dataverse (see the Linked Dataverses + Linked Datasets section of the Dataverse Management guide for more information).
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#link-a-dataset
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#link-a-dataset
      * @see http://guides.dataverse.org/en/latest/user/dataverse-management.html#dataset-linking
      * @method PUT
      *
@@ -379,7 +379,7 @@ class Datasets extends Dataverse {
     /**
      * Check if a dataset is locked
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#dataset-locks
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#dataset-locks
      * @method GET
      *
      * @param string                            $dataset_id                     The Dataset id
@@ -393,7 +393,7 @@ class Datasets extends Dataverse {
      * Check if a dataset is locked
      *
      * If the dataset is not locked (or if there is no lock of the specified type), the API will exit with a warning message.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#dataset-locks
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#dataset-locks
      * @method DELETE
      *
      * @param string                            $dataset_id                     The Dataset id

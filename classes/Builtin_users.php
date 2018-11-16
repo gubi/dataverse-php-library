@@ -25,7 +25,7 @@ class Builtin_users extends Dataverse {
      *
      * For security reasons, builtin users cannot be created via API unless the team who runs the Dataverse installation has populated a database setting called `BuiltinUsers.KEY`, which is described under “Securing Your Installation” and “Database Settings” in the Configuration section of the Installation Guide.
      * You will need to know the value of `BuiltinUsers.KEY` before you can proceed.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#create-a-builtin-user
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#create-a-builtin-user
      * @see http://guides.dataverse.org/en/latest/installation/config.html
      * @method POST
      * @example http://guides.dataverse.org/en/latest/_downloads/user-add.json

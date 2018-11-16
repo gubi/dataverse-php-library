@@ -25,7 +25,7 @@ class Dataverses extends Dataverse {
      *
      * Generates a new dataverse under `$id`.
      * Expects a JSON content describing the dataverse.
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#create-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#create-a-dataverse
      * @method POST
      *
      * @param string                            $id                             (Optional) A dataverse id (long) or a dataverse alias (more robust). If `$id` is omitted, a root dataverse is created
@@ -38,7 +38,7 @@ class Dataverses extends Dataverse {
      * View a Dataverse
      *
      * View data about the dataverse identified by `$id`
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#view-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#view-a-dataverse
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -52,7 +52,7 @@ class Dataverses extends Dataverse {
      * Delete a Dataverse
      *
      * Deletes the dataverse whose ID is given
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-a-dataverse
      * @method DELETE
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -66,7 +66,7 @@ class Dataverses extends Dataverse {
      * Show Contents of a Dataverse
      *
      * Lists all the DvObjects under dataverse `id`
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#show-contents-of-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#show-contents-of-a-dataverse
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -80,7 +80,7 @@ class Dataverses extends Dataverse {
      * List Roles Defined in a Dataverse
      *
      * All the roles defined directly in the dataverse identified by `id`
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-roles-defined-in-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-roles-defined-in-a-dataverse
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -94,7 +94,7 @@ class Dataverses extends Dataverse {
      * List Facets Configured for a Dataverse
      *
      * List all the facets for a given dataverse `id`
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-facets-configured-for-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-facets-configured-for-a-dataverse
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -108,7 +108,7 @@ class Dataverses extends Dataverse {
      * Set Facets for a Dataverse
      *
      * Assign search facets for a given dataverse with alias `$alias`
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#set-facets-for-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#set-facets-for-a-dataverse
      * @method POST
      * @example facets.json:
      * ``` json
@@ -127,7 +127,7 @@ class Dataverses extends Dataverse {
      *
      * Creates a new role under dataverse `id`.
      * Needs a json file with the role description
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#create-a-new-role-in-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#create-a-new-role-in-a-dataverse
      * @method POST
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -141,7 +141,7 @@ class Dataverses extends Dataverse {
      * List Role Assignments in a Dataverse
      *
      * List all the role assignments at the given dataverse
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-role-assignments-in-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-role-assignments-in-a-dataverse
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -155,7 +155,7 @@ class Dataverses extends Dataverse {
      * Assign a New Role on a Dataverse
      *
      * Assigns a new role, based on the POSTed JSON
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#assign-a-new-role-on-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#assign-a-new-role-on-a-dataverse
      * @method POST
      * @example POSTed JSON:
      * ``` json
@@ -176,7 +176,7 @@ class Dataverses extends Dataverse {
      * Delete Role Assignment from a Dataverse
      * Delete the assignment whose id is `$id`
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-role-assignment-from-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-role-assignment-from-a-dataverse
      * @method DELETE
      */
     public static function delete_role($id) {
@@ -188,7 +188,7 @@ class Dataverses extends Dataverse {
      * List Metadata Blocks Defined on a Dataverse
      * Get the metadata blocks defined on the passed dataverse
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#list-metadata-blocks-defined-on-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#list-metadata-blocks-defined-on-a-dataverse
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -204,7 +204,7 @@ class Dataverses extends Dataverse {
      * Sets the metadata blocks of the dataverse.
      * Makes the dataverse a metadatablock root.
      * The query body is a JSON array with a list of metadatablocks identifiers (either id or name).
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#define-metadata-blocks-for-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#define-metadata-blocks-for-a-dataverse
      * @method POST
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
      */
@@ -217,7 +217,7 @@ class Dataverses extends Dataverse {
      * Determine if a Dataverse Inherits Its Metadata Blocks from Its Parent
      *
      * Get whether the dataverse is a metadata block root, or does it uses its parent blocks
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#determine-if-a-dataverse-inherits-its-metadata-blocks-from-its-parent
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#determine-if-a-dataverse-inherits-its-metadata-blocks-from-its-parent
      * @method GET
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -232,7 +232,7 @@ class Dataverses extends Dataverse {
      *
      * Set whether the dataverse is a metadata block root, or does it uses its parent blocks.
      * Possible values are `true` and `false` (both are valid JSON expressions).
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#configure-a-dataverse-to-inherit-its-metadata-blocks-from-its-parent
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#configure-a-dataverse-to-inherit-its-metadata-blocks-from-its-parent
      * @method PUT
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
@@ -248,7 +248,7 @@ class Dataverses extends Dataverse {
      * To create a dataset, you must create a JSON file containing all the metadata you want.
      * Then, you must decide which dataverse to create the dataset in and target that datavese with either the “alias” of the dataverse (e.g. “root” or the database id of the dataverse (e.g. “1”).
      * The initial version state will be set to `DRAFT`
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#create-a-dataset-in-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#create-a-dataset-in-a-dataverse
      * @method POST
      * @example http://guides.dataverse.org/en/latest/_downloads/dataset-finch1.json
      *
@@ -266,7 +266,7 @@ class Dataverses extends Dataverse {
      * The PID is provided as a parameter at the URL.
      * The following line imports a dataset with the PID PERSISTENT_IDENTIFIER to Dataverse, and then releases it
      * NOTE This action requires a Dataverse account with super-user permissions
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#import-a-dataset-into-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#import-a-dataset-into-a-dataverse
      * @method POST
      *
      * @param string                            $alias                          A dataverse alias
@@ -282,7 +282,7 @@ class Dataverses extends Dataverse {
      * Publish a Dataverse
      *
      * Publish the Dataverse pointed by `identifier`, which can either by the dataverse alias or its numerical id
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#publish-a-dataverse
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#publish-a-dataverse
      * @method POST
      *
      * @param string                            $identifier                     A dataverse alias or its numerical id

@@ -24,7 +24,7 @@ class Roles extends Dataverse {
      * Create a New Role in a Dataverse
      *
      * Creates a new role in dataverse object whose Id is `dataverseIdtf` (that’s an id/alias)
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#id1
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#id1
      * @method POST
      *
      * @param string                            $dataverseIdtf                  A dataverse id (long) or a dataverse alias (more robust)
@@ -37,7 +37,7 @@ class Roles extends Dataverse {
     /**
      * Show Role
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#show-role
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#show-role
      * @method GET
      *
      * @param string                            $id                             The role ID
@@ -50,7 +50,7 @@ class Roles extends Dataverse {
     /**
      * Delete Role
      *
-     * @see http://guides.dataverse.org/en/latest/api/native-api.html?highlight=import#delete-role
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#delete-role
      * @method DELETE
      *
      * @param string                            $id                             The role ID
