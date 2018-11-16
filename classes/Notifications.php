@@ -22,9 +22,13 @@
 class Notifications extends Dataverse {
     /**
      * Get All Notifications by User
+     *
+     * Each user can get a dump of their notifications by passing in their API token
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#get-all-notifications-by-user
+     * @method GET
      */
     public static function get_user_notifications() {
-
+        parent::get("notifications/all");
     }
 }
 ?>
