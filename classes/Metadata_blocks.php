@@ -22,16 +22,27 @@
 class Metadata_blocks extends Dataverse {
     /**
      * Show Info About All Metadata Blocks
+     *
+     * Lists brief info about all metadata blocks registered in the system
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#show-info-about-all-metadata-blocks
+     * @method GET
      */
     public static function get_all_metadata_info() {
-
+        parent::get("metadatablocks");
     }
 
     /**
      * Show Info About Single Metadata Block
+     *
+     * Return data about the block whose `identifier` is passed.
+     * @see http://guides.dataverse.org/en/latest/api/native-api.html#show-info-about-single-metadata-block
+     * @method GET
+     *
+     * @param string                            $identifier                     The identifier can either be the block’s id, or its name
      */
-    public static function get_metadata_info() {
-
+    public static function get_metadata_info($identifier) {
+        parent::check("\$identifier", $identifier);
+        parent::get("metadatablocks/{$identifier}");
     }
 }
 ?>
