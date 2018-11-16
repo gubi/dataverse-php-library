@@ -10,7 +10,7 @@
 */
 
 /**
- * A script for manage XML file and prepare data for Dataverse
+ * A set of classes class that allow a simple Dataverse API use via PHP
  *
  * @package Bioversity AGROVOC Indexing
  * @author Alessandro Gubitosi <a.gubitosi@cgiar.org>
