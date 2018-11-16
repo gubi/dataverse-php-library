@@ -151,9 +151,6 @@ class Dataverse {
             $output = self::move_to_top($output, "status");
         }
 
-        if(curl_getinfo(self::$ch, CURLINFO_HTTP_CODE) !== 200) {
-            return json_encode($output);
-        }
         self::curl_close();
 
         $output_array = json_decode(json_encode($output), 1);
