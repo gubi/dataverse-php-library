@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Datasets extends Dataverse {
+class Datasets extends Dataverse\Request_handler {
     /**
      * Get JSON Representation of a Dataset
      *
@@ -33,9 +33,9 @@ class Datasets extends Dataverse {
     public static function get_dataset($id, $persistentId = true) {
         parent::check("\$id", $id);
         if($persistentId) {
-            parent::get("datasets/:persistentId/?persistentId={$persistentId}");
+            return parent::get("datasets/:persistentId/?persistentId={$persistentId}");
         } else {
-            parent::get("datasets/{$id}");
+            return parent::get("datasets/{$id}");
         }
     }
 
@@ -50,7 +50,7 @@ class Datasets extends Dataverse {
      */
     public static function delete_dataset($id) {
         parent::check("\$id", $id);
-        parent::delete("datasets/{$id}");
+        return parent::delete("datasets/{$id}");
     }
 
     /**
@@ -63,7 +63,7 @@ class Datasets extends Dataverse {
      */
     public static function list_dataset_versions($id) {
         parent::check("\$id", $id);
-        parent::get("datasets/{$id}/versions");
+        return parent::get("datasets/{$id}/versions");
     }
 
     /**
@@ -79,7 +79,7 @@ class Datasets extends Dataverse {
     public static function get_dataset_version($id, $versionNumber) {
         parent::check("\$id", $id);
         parent::check("\$versionNumber", $versionNumber);
-        parent::get("datasets/{$id}/versions/{$versionNumber}");
+        return parent::get("datasets/{$id}/versions/{$versionNumber}");
     }
 
     /**
@@ -94,7 +94,7 @@ class Datasets extends Dataverse {
      */
     public static function export_dataset_metadata($persistentId, $exporter = "ddi") {
         parent::check("\$persistentId", $persistentId);
-        parent::get("datasets/export?exporter={$exporter}&persistentId={$persistentId}");
+        return parent::get("datasets/export?exporter={$exporter}&persistentId={$persistentId}");
     }
 
     /**
@@ -110,7 +110,7 @@ class Datasets extends Dataverse {
     public static function list_dataset_files($id, $versionId) {
         parent::check("\$id", $id);
         parent::check("\$versionId", $versionId);
-        parent::get("datasets/{$id}/versions/{$versionId}/files");
+        return parent::get("datasets/{$id}/versions/{$versionId}/files");
     }
 
     /**
@@ -126,7 +126,7 @@ class Datasets extends Dataverse {
     public static function list_dataset_metadata_blocks($id, $versionId) {
         parent::check("\$id", $id);
         parent::check("\$versionId", $versionId);
-        parent::get("datasets/{$id}/versions/{$versionId}/metadata");
+        return parent::get("datasets/{$id}/versions/{$versionId}/metadata");
     }
 
     /**
@@ -144,7 +144,7 @@ class Datasets extends Dataverse {
         parent::check("\$id", $id);
         parent::check("\$versionId", $versionId);
         parent::check("\$blockname", $blockname);
-        parent::get("datasets/{$id}/versions/{$versionId}/metadata/{$blockname}");
+        return parent::get("datasets/{$id}/versions/{$versionId}/metadata/{$blockname}");
     }
 
     /**
@@ -176,9 +176,9 @@ class Datasets extends Dataverse {
     public static function edit_dataset_metadata($persistentId, $replace = true) {
         parent::check("\$persistentId", $persistentId);
         if($replace) {
-            parent::post("datasets/:persistentId/editMetadata?persistentId=$persistentId&replace=true --upload-file dataset-edit-metadata-sample.json");
+            return parent::post("datasets/:persistentId/editMetadata?persistentId=$persistentId&replace=true --upload-file dataset-edit-metadata-sample.json");
         } else {
-            parent::post("datasets/:persistentId/editMetadata/?persistentId=$persistentId --upload-file dataset-edit-metadata-sample.json");
+            return parent::post("datasets/:persistentId/editMetadata/?persistentId=$persistentId --upload-file dataset-edit-metadata-sample.json");
         }
     }
 
@@ -194,7 +194,7 @@ class Datasets extends Dataverse {
      */
     public static function delete_dataset_metadata($persistentId) {
         parent::check("\$persistentId", $persistentId);
-        parent::put("datasets/:persistentId/deleteMetadata/?persistentId=$persistentId --upload-file dataset-delete-author-metadata.json");
+        return parent::put("datasets/:persistentId/deleteMetadata/?persistentId=$persistentId --upload-file dataset-delete-author-metadata.json");
     }
 
     /**
@@ -210,7 +210,7 @@ class Datasets extends Dataverse {
      */
     public static function publish_dataset($id, $type = "minor") {
         parent::check("\$id", $id);
-        parent::post("datasets/{$id}/actions/:publish?type={$type}");
+        return parent::post("datasets/{$id}/actions/:publish?type={$type}");
     }
 
     /**
@@ -224,7 +224,7 @@ class Datasets extends Dataverse {
      */
     public static function delete_dataset_draft($id) {
         parent::check("\$id", $id);
-        parent::delete("datasets/{$id}/versions/:draft");
+        return parent::delete("datasets/{$id}/versions/:draft");
     }
 
     /**
@@ -240,7 +240,7 @@ class Datasets extends Dataverse {
      */
     public static function set_dataset_citation_date($id) {
         parent::check("\$id", $id);
-        parent::put("datasets/{$id}/citationdate");
+        return parent::put("datasets/{$id}/citationdate");
     }
 
     /**
@@ -254,7 +254,7 @@ class Datasets extends Dataverse {
      */
     public static function set_default_citation_date($id) {
         parent::check("\$id", $id);
-        parent::delete("datasets/{$id}/citationdate");
+        return parent::delete("datasets/{$id}/citationdate");
     }
 
     /**
@@ -268,7 +268,7 @@ class Datasets extends Dataverse {
      */
     public static function list_roles($id) {
         parent::check("\$id", $id);
-        parent::get("datasets/{$id}/assignments");
+        return parent::get("datasets/{$id}/assignments");
     }
 
     /**
@@ -282,7 +282,7 @@ class Datasets extends Dataverse {
      */
     public static function create_url($id) {
         parent::check("\$id", $id);
-        parent::post("datasets/{$id}/privateUrl");
+        return parent::post("datasets/{$id}/privateUrl");
     }
 
     /**
@@ -295,7 +295,7 @@ class Datasets extends Dataverse {
      */
     public static function get_url($id) {
         parent::check("\$id", $id);
-        parent::get("datasets/{$id}/privateUrl");
+        return parent::get("datasets/{$id}/privateUrl");
     }
 
     /**
@@ -308,7 +308,7 @@ class Datasets extends Dataverse {
      */
     public static function delete_url($id) {
         parent::check("\$id", $id);
-        parent::delete("datasets/{$id}/privateUrl");
+        return parent::delete("datasets/{$id}/privateUrl");
     }
 
     /**
@@ -326,7 +326,7 @@ class Datasets extends Dataverse {
         parent::check("\$persistentId", $persistentId);
         parent::check("\$file", $file);
         parent::check("\$json_data", $json_data);
-        parent::post("datasets/:persistentId/add?persistentId={$persistentId}&file={$file}&jsonData={$json_data}");
+        return parent::post("datasets/:persistentId/add?persistentId={$persistentId}&file={$file}&jsonData={$json_data}");
     }
 
     /**
@@ -341,7 +341,7 @@ class Datasets extends Dataverse {
      */
     public static function submit_for_review($persistentId) {
         parent::check("\$persistentId", $persistentId);
-        parent::post("datasets/:persistentId/submitForReview?persistentId={$persistentId}");
+        return parent::post("datasets/:persistentId/submitForReview?persistentId={$persistentId}");
     }
 
     /**
@@ -373,7 +373,7 @@ class Datasets extends Dataverse {
     public static function link_dataset($linked_dataset_id, $linking_dataverse_alias) {
         parent::check("\$linked_dataset_id", $linked_dataset_id);
         parent::check("\$linking_dataverse_alias", $linking_dataverse_alias);
-        parent::put("datasets/{$linked_dataset_id}/link/{$linking_dataverse_alias}");
+        return parent::put("datasets/{$linked_dataset_id}/link/{$linking_dataverse_alias}");
     }
 
     /**
@@ -386,7 +386,7 @@ class Datasets extends Dataverse {
      */
     public static function is_dataset_locked($dataset_id) {
         parent::check("\$dataset_id", $dataset_id);
-        parent::get("datasets/{$dataset_id}/locks");
+        return parent::get("datasets/{$dataset_id}/locks");
     }
 
     /**
@@ -400,7 +400,7 @@ class Datasets extends Dataverse {
      */
     public static function unloack_all_datasets($dataset_id) {
         parent::check("\$dataset_id", $dataset_id);
-        parent::delete("datasets/{$dataset_id}/locks");
+        return parent::delete("datasets/{$dataset_id}/locks");
     }
 }
 ?>

@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Groups extends Dataverse {
+class Groups extends Dataverse\Request_handler {
     /**
      * Create New Explicit Group
      *
@@ -32,7 +32,7 @@ class Groups extends Dataverse {
      */
     public static function create_group($id) {
         parent::check("\$id", $id);
-        parent::post("dataverses/{$id}/groups");
+        return parent::post("dataverses/{$id}/groups");
     }
 
     /**
@@ -45,7 +45,7 @@ class Groups extends Dataverse {
      */
     public static function list_groups($id) {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}/groups");
+        return parent::get("dataverses/{$id}/groups");
     }
 
     /**
@@ -60,7 +60,7 @@ class Groups extends Dataverse {
     public static function get_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::get("dataverses/{$id}/groups/{$groupAlias}");
+        return parent::get("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -77,7 +77,7 @@ class Groups extends Dataverse {
     public static function update_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::put("dataverses/{$id}/groups/{$groupAlias}");
+        return parent::put("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -92,7 +92,7 @@ class Groups extends Dataverse {
     public static function delete_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::delete("dataverses/{$id}/groups/{$groupAlias}");
+        return parent::delete("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -108,7 +108,7 @@ class Groups extends Dataverse {
     public static function add_group_roles($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::post("dataverses/{$id}/groups/{$groupAlias}/roleAssignees");
+        return parent::post("dataverses/{$id}/groups/{$groupAlias}/roleAssignees");
     }
 
     /**
@@ -126,7 +126,7 @@ class Groups extends Dataverse {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
         parent::check("\$roleAssigneeIdentifier", $roleAssigneeIdentifier);
-        parent::put("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
+        return parent::put("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
 
     }
 
@@ -145,7 +145,7 @@ class Groups extends Dataverse {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
         parent::check("\$roleAssigneeIdentifier", $roleAssigneeIdentifier);
-        parent::delete("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
+        return parent::delete("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
     }
 }
 ?>

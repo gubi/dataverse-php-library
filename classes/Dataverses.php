@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Dataverses extends Dataverse {
+class Dataverses extends Dataverse\Request_handler {
     /**
      * Create a Dataverse
      *
@@ -31,7 +31,7 @@ class Dataverses extends Dataverse {
      * @param string                            $id                             (Optional) A dataverse id (long) or a dataverse alias (more robust). If `$id` is omitted, a root dataverse is created
      */
     public static function create($id) {
-        parent::post("dataverses/{$id}");
+        return parent::post("dataverses/{$id}");
     }
 
     /**
@@ -45,7 +45,7 @@ class Dataverses extends Dataverse {
      */
     public static function view($id) {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}");
+        return parent::get("dataverses/{$id}");
     }
 
     /**
@@ -59,7 +59,7 @@ class Dataverses extends Dataverse {
      */
     public static function delete() {
         parent::check("\$id", $id);
-        parent::delete("dataverses/{$id}");
+        return parent::delete("dataverses/{$id}");
     }
 
     /**
@@ -73,7 +73,7 @@ class Dataverses extends Dataverse {
      */
     public static function show_contents($id) {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}/contents");
+        return parent::get("dataverses/{$id}/contents");
     }
 
     /**
@@ -87,7 +87,7 @@ class Dataverses extends Dataverse {
      */
     public static function list_defined_roles($id) {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}/roles");
+        return parent::get("dataverses/{$id}/roles");
     }
 
     /**
@@ -101,7 +101,7 @@ class Dataverses extends Dataverse {
      */
     public static function list_facets() {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}/facets");
+        return parent::get("dataverses/{$id}/facets");
     }
 
     /**
@@ -134,7 +134,7 @@ class Dataverses extends Dataverse {
      */
     public static function new_role($id) {
         parent::check("\$id", $id);
-        parent::post("dataverses/{$id}/roles");
+        return parent::post("dataverses/{$id}/roles");
     }
 
     /**
@@ -148,7 +148,7 @@ class Dataverses extends Dataverse {
      */
     public static function list_roles_assignments($id) {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}/assignments");
+        return parent::get("dataverses/{$id}/assignments");
     }
 
     /**
@@ -181,7 +181,7 @@ class Dataverses extends Dataverse {
      */
     public static function delete_role($id) {
         parent::check("\$id", $id);
-        parent::delete("dataverses/{$id}/assignments");
+        return parent::delete("dataverses/{$id}/assignments");
     }
 
     /**
@@ -195,7 +195,7 @@ class Dataverses extends Dataverse {
      */
     public static function get_metadata_blocks($id) {
         parent::check("\$id", $id);
-        parent::get("dataverses/{$id}/metadatablocks");
+        return parent::get("dataverses/{$id}/metadatablocks");
     }
 
     /**
@@ -210,7 +210,7 @@ class Dataverses extends Dataverse {
      */
     public static function set_metadata_block($id) {
         parent::check("\$id", $id);
-        parent::post("dataverses/{$id}/metadatablocks");
+        return parent::post("dataverses/{$id}/metadatablocks");
     }
 
     /**
@@ -224,7 +224,7 @@ class Dataverses extends Dataverse {
      */
     public static function is_metadata_block_root($id) {
         parent::check("\$id", $id);
-        parent::post("dataverses/{$id}/metadatablocks/isRoot");
+        return parent::post("dataverses/{$id}/metadatablocks/isRoot");
     }
 
     /**
@@ -239,7 +239,7 @@ class Dataverses extends Dataverse {
      */
     public static function set_metadata_block_root($id) {
         parent::check("\$id", $id);
-        parent::post("dataverses/{$id}/metadatablocks/isRoot");
+        return parent::post("dataverses/{$id}/metadatablocks/isRoot");
     }
 
     /**
@@ -289,7 +289,7 @@ class Dataverses extends Dataverse {
      */
     public static function publish_dataverse($identifier) {
         parent::check("\$identifier", $identifier);
-        parent::post("dataverses/{$identifier}/actions/:publish");
+        return parent::post("dataverses/{$identifier}/actions/:publish");
     }
 }
 ?>

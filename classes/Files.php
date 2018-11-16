@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Files extends Dataverse {
+class Files extends Dataverse\Request_handler {
     /**
      * Adding Files
      * NOTE: Files can be added via the native API but the operation is performed on the parent object, which is a dataset.
@@ -39,7 +39,7 @@ class Files extends Dataverse {
      */
     public static function get_file($persistentId) {
         parent::check("\$persistentId", $persistentId);
-        parent::get("access/datafile/:persistentId/?persistentId={$persistentId}");
+        return parent::get("access/datafile/:persistentId/?persistentId={$persistentId}");
     }
 
     /**
@@ -54,7 +54,7 @@ class Files extends Dataverse {
      */
     public static function restrict_file($persistentId) {
         parent::check("\$persistentId", $persistentId);
-        parent::put("files/:persistentId/restrict?persistentId={$persistentId}");
+        return parent::put("files/:persistentId/restrict?persistentId={$persistentId}");
     }
 
     /**
@@ -73,7 +73,7 @@ class Files extends Dataverse {
         parent::check("\$id", $id);
         parent::check("\$file", $file);
         parent::check("\$json_data", $json_data);
-        parent::post("files/{$id}/replace?&file={$file}&jsonData={$json_data}");
+        return parent::post("files/{$id}/replace?&file={$file}&jsonData={$json_data}");
     }
 
     /**
@@ -88,7 +88,7 @@ class Files extends Dataverse {
      */
     public static function uninget_file($id) {
         parent::check("\$id", $id);
-        parent::post("files/{$id}/uningest");
+        return parent::post("files/{$id}/uningest");
     }
 
     /**
@@ -105,7 +105,7 @@ class Files extends Dataverse {
      */
     public static function reingest_file($id) {
         parent::check("\$id", $id);
-        parent::post("files/{$id}/prov-json");
+        return parent::post("files/{$id}/prov-json");
     }
 
     /* -------------------------------------------------------------------------
@@ -122,7 +122,7 @@ class Files extends Dataverse {
      */
     public static function get_provenance($id) {
         parent::check("\$id", $id);
-        parent::get("files/{$id}/prov-json");
+        return parent::get("files/{$id}/prov-json");
     }
 
     /**
@@ -135,7 +135,7 @@ class Files extends Dataverse {
      */
     public static function get_provenance_description($id) {
         parent::check("\$id", $id);
-        parent::get("files/{$id}/prov-freeform");
+        return parent::get("files/{$id}/prov-freeform");
     }
 
     /**
@@ -161,7 +161,7 @@ class Files extends Dataverse {
      */
     public static function delete_provenance($id) {
         parent::check("\$id", $id);
-        parent::delete("files/{$id}/prov-json");
+        return parent::delete("files/{$id}/prov-json");
     }
 }
 ?>

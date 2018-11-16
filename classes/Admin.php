@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Admin extends Dataverse {
+class Admin extends Dataverse\Request_handler {
     /**
      * List All Database Settings
      *
@@ -27,7 +27,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_settings($name) {
-        parent::get("admin/settings");
+        return parent::get("admin/settings");
     }
 
     /**
@@ -40,7 +40,7 @@ class Admin extends Dataverse {
      * @param string                            $name                           Settings name
      */
     public static function set_setting($name) {
-        parent::put("admin/settings/{$name}");
+        return parent::put("admin/settings/{$name}");
     }
 
     /**
@@ -53,7 +53,7 @@ class Admin extends Dataverse {
      * @param string                            $name                           Settings name
      */
     public static function delete_setting($name) {
-        parent::delete("admin/settings/{$name}");
+        return parent::delete("admin/settings/{$name}");
     }
 
     /**
@@ -64,7 +64,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_authentication_provider_factories() {
-        parent::get("admin/authenticationProviderFactories");
+        return parent::get("admin/authenticationProviderFactories");
     }
 
     /**
@@ -75,7 +75,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_authentication_providers() {
-        parent::get("admin/authenticationProviders");
+        return parent::get("admin/authenticationProviders");
     }
 
     /**
@@ -86,7 +86,7 @@ class Admin extends Dataverse {
      * @method POST
      */
     public static function add_authentication_provider() {
-        parent::post("admin/authenticationProviders");
+        return parent::post("admin/authenticationProviders");
     }
 
     /**
@@ -99,7 +99,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The Authentication Provider ID
      */
     public static function get_authentication_provider($id) {
-        parent::get("admin/authenticationProviders/{$id}");
+        return parent::get("admin/authenticationProviders/{$id}");
     }
 
     /**
@@ -112,7 +112,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The Authentication Provider ID
      */
     public static function toggle_authentication_provider($id) {
-        parent::put("admin/authenticationProviders/{$id}/enabled");
+        return parent::put("admin/authenticationProviders/{$id}/enabled");
     }
 
     /**
@@ -124,7 +124,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The Authentication Provider ID
      */
     public static function is_authentication_provider_enable($id) {
-        parent::get("admin/authenticationProviders/{$id}/enabled");
+        return parent::get("admin/authenticationProviders/{$id}/enabled");
     }
 
     /**
@@ -137,7 +137,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The Authentication Provider ID
      */
     public static function delete_authentication_provider($id) {
-        parent::delete("admin/authenticationProviders/{$id}/");
+        return parent::delete("admin/authenticationProviders/{$id}/");
     }
 
     /**
@@ -147,7 +147,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_roles() {
-        parent::get("api/admin/roles");
+        return parent::get("api/admin/roles");
     }
 
     /**
@@ -158,7 +158,7 @@ class Admin extends Dataverse {
      * @method POST
      */
     public static function create_role() {
-        parent::post("api/admin/roles");
+        return parent::post("api/admin/roles");
     }
 
     /**
@@ -169,7 +169,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_users() {
-        parent::get("api/admin/list-users");
+        return parent::get("api/admin/list-users");
     }
 
     /**
@@ -182,7 +182,7 @@ class Admin extends Dataverse {
      * @param string                            $identifier                     The user identifier (without the "@" sign)
      */
     public static function get_user($identifier) {
-        parent::get("api/admin/authenticatedUsers/{$identifier}");
+        return parent::get("api/admin/authenticatedUsers/{$identifier}");
     }
 
     /**
@@ -192,7 +192,7 @@ class Admin extends Dataverse {
      * @method POST
      */
     public static function create_user() {
-        parent::post("api/admin/authenticatedUsers");
+        return parent::post("api/admin/authenticatedUsers");
     }
 
     /**
@@ -205,7 +205,7 @@ class Admin extends Dataverse {
      * @param string                            $identifier                     The user identifier (without the "@" sign)
      */
     public static function set_superuser($identifier) {
-        parent::post("admin/superuser/{$identifier}");
+        return parent::post("admin/superuser/{$identifier}");
     }
 
     /**
@@ -218,7 +218,7 @@ class Admin extends Dataverse {
      * @param string                            $identifier                     The user identifier (without the "@" sign)
      */
     public static function get_assignee_assignments($identifier) {
-        parent::get("admin/assignments/assignees/{$identifier}");
+        return parent::get("admin/assignments/assignees/{$identifier}");
     }
 
     /**
@@ -231,7 +231,7 @@ class Admin extends Dataverse {
      * @param string                            $identifier                     The user identifier (without the "@" sign)
      */
     public static function get_user_permissions($identifier) {
-        parent::get("admin/permissions/{$identifier}");
+        return parent::get("admin/permissions/{$identifier}");
     }
 
     /**
@@ -245,7 +245,7 @@ class Admin extends Dataverse {
      * @param string                            $identifier                     The user identifier (without the "@" sign)
      */
     public static function get_role_assignee($identifier) {
-        parent::get("admin/assignee/{$identifier}");
+        return parent::get("admin/assignee/{$identifier}");
     }
 
     /**
@@ -256,7 +256,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_saved_searches() {
-        parent::get("admin/savedsearches/list");
+        return parent::get("admin/savedsearches/list");
     }
 
     /**
@@ -269,7 +269,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The search ID
      */
     public static function get_saved_search($id) {
-        parent::get("admin/savedsearches/{$id}");
+        return parent::get("admin/savedsearches/{$id}");
     }
 
     /**
@@ -281,7 +281,7 @@ class Admin extends Dataverse {
      * @method PUT
      */
     public static function get_links_by_searches($debug = true) {
-        parent::put("admin/savedsearches/makelinks/all" . ($debug) ? "?debug=true" : "");
+        return parent::put("admin/savedsearches/makelinks/all" . ($debug) ? "?debug=true" : "");
     }
 
     /**
@@ -296,7 +296,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The search ID
      */
     public static function get_links_by_search($id, $debug = true) {
-        parent::put("admin/savedsearches/{$id}" . ($debug) ? "?debug=true" : "");
+        return parent::put("admin/savedsearches/{$id}" . ($debug) ? "?debug=true" : "");
     }
 
     /**
@@ -309,7 +309,7 @@ class Admin extends Dataverse {
      * @param string                            $datasetVersionId               The Dataverse version ID
      */
     public static function dataset_integrity($datasetVersionId) {
-        parent::post("admin/datasets/integrity/{$datasetVersionId}/fixmissingunf");
+        return parent::post("admin/datasets/integrity/{$datasetVersionId}/fixmissingunf");
     }
 
     /* -------------------------------------------------------------------------
@@ -323,7 +323,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_workflows() {
-        parent::get("admin/workflows");
+        return parent::get("admin/workflows");
     }
 
     /**
@@ -335,7 +335,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The search ID
      */
     public static function get_workflow($id) {
-        parent::get("admin/admin/workflows/{$id}");
+        return parent::get("admin/admin/workflows/{$id}");
     }
 
     /**
@@ -346,7 +346,7 @@ class Admin extends Dataverse {
      * @method POST
      */
     public static function add_workflow() {
-        parent::post("admin/workflows");
+        return parent::post("admin/workflows");
     }
 
     /**
@@ -359,7 +359,7 @@ class Admin extends Dataverse {
      * @param string                            $id                             The workflow ID
      */
     public static function delete_workflow($id) {
-        parent::delete("admin/workflows/{$id}");
+        return parent::delete("admin/workflows/{$id}");
     }
 
     /**
@@ -368,7 +368,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_default_workflows() {
-        parent::get("admin/workflows/default");
+        return parent::get("admin/workflows/default");
     }
 
     /**
@@ -379,7 +379,7 @@ class Admin extends Dataverse {
      * @param string                            $triggerType                    The Trigger type
      */
     public static function get_default_workflow($triggerType) {
-        parent::get("admin/workflows/default/{$triggerType}");
+        return parent::get("admin/workflows/default/{$triggerType}");
     }
 
     /**
@@ -392,7 +392,7 @@ class Admin extends Dataverse {
      * @param string                            $triggerType                    The Trigger type
      */
     public static function set_default_workflow($triggerType) {
-        parent::put("admin/workflows/default/$triggerType");
+        return parent::put("admin/workflows/default/$triggerType");
     }
 
     /**
@@ -404,7 +404,7 @@ class Admin extends Dataverse {
      * @param string                            $triggerType                    The Trigger type
      */
     public static function unset_default_workflow($triggerType) {
-        parent::delete("admin/workflows/default/{$triggerType}");
+        return parent::delete("admin/workflows/default/{$triggerType}");
     }
 
     /**
@@ -414,7 +414,7 @@ class Admin extends Dataverse {
      * @method GET
      */
     public static function get_workflow_ip_whitelist() {
-        parent::get("admin/workflows/default");
+        return parent::get("admin/workflows/default");
     }
 
     /**
@@ -424,7 +424,7 @@ class Admin extends Dataverse {
      * @method PUT
      */
     public static function set_workflow_ip_whitelist() {
-        parent::put("admin/workflows/default");
+        return parent::put("admin/workflows/default");
     }
 
     /**
@@ -434,7 +434,7 @@ class Admin extends Dataverse {
      * @method DELETE
      */
     public static function set_default_workflow_ip_whitelist() {
-        parent::delete("admin/workflows/default");
+        return parent::delete("admin/workflows/default");
     }
 
     /* -------------------------------------------------------------------------
@@ -451,7 +451,7 @@ class Admin extends Dataverse {
      * @param string                            $triggerType                    The Trigger type
      */
     public static function clear_specific_metrics_cache($metricDbName) {
-        parent::delete("admin/clearMetricsCache/{$metricDbName}");
+        return parent::delete("admin/clearMetricsCache/{$metricDbName}");
     }
 
     /**
@@ -461,7 +461,7 @@ class Admin extends Dataverse {
      * @method DELETE
      */
     public static function clear_metrics_cache() {
-        parent::delete("admin/clearMetricsCache");
+        return parent::delete("admin/clearMetricsCache");
     }
 }
 ?>

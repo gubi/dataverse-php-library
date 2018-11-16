@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Roles extends Dataverse {
+class Roles extends Dataverse\Request_handler {
     /**
      * Create a New Role in a Dataverse
      *
@@ -31,7 +31,7 @@ class Roles extends Dataverse {
      */
     public static function create_role($dataverseIdtf) {
         parent::check("\$dataverseIdtf", $dataverseIdtf);
-        parent::post("roles?dvo={$dataverseIdtf}");
+        return parent::post("roles?dvo={$dataverseIdtf}");
     }
 
     /**
@@ -44,7 +44,7 @@ class Roles extends Dataverse {
      */
     public static function get_role($id) {
         parent::check("\$id", $id);
-        parent::get("roles/{$id}");
+        return parent::get("roles/{$id}");
     }
 
     /**
@@ -57,7 +57,7 @@ class Roles extends Dataverse {
      */
     public static function delete_role($id) {
         parent::check("\$id", $id);
-        parent::delete("roles/{$id}");
+        return parent::delete("roles/{$id}");
     }
 }
 ?>

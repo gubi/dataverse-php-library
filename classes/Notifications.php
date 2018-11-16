@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Notifications extends Dataverse {
+class Notifications extends Dataverse\Request_handler {
     /**
      * Get All Notifications by User
      *
@@ -28,7 +28,7 @@ class Notifications extends Dataverse {
      * @method GET
      */
     public static function get_user_notifications() {
-        parent::get("notifications/all");
+        return parent::get("notifications/all");
     }
 }
 ?>
