@@ -60,7 +60,7 @@ class Groups extends Dataverse {
     public static function get_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::get("dataverses/{$id}/groups/$groupAlias");
+        parent::get("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -77,7 +77,7 @@ class Groups extends Dataverse {
     public static function update_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::put("dataverses/{$id}/groups/$groupAlias");
+        parent::put("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -92,7 +92,7 @@ class Groups extends Dataverse {
     public static function delete_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        parent::delete("dataverses/{$id}/groups/$groupAlias");
+        parent::delete("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**

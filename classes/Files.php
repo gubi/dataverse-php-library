@@ -73,7 +73,7 @@ class Files extends Dataverse {
         parent::check("\$id", $id);
         parent::check("\$file", $file);
         parent::check("\$json_data", $json_data);
-        parent::post("files/$id/replace?&file={$file}&jsonData={$json_data}");
+        parent::post("files/{$id}/replace?&file={$file}&jsonData={$json_data}");
     }
 
     /**
