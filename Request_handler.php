@@ -18,7 +18,17 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Dataverse {
+namespace Dataverse;
+
+// Suppress PHP Warning: "Declaration of ... should be compatible with ... in ... on line 0"
+if(PHP_MAJOR_VERSION >= 7) { set_error_handler(function ($errno, $errstr) { return strpos($errstr, 'Declaration of') === 0; }, E_WARNING); }
+
+// Require all classes in "classes/" dir
+foreach (glob("classes/*") as $filename) {
+    require_once($filename);
+}
+
+class Request_handler {
     private static $ch;
     public static $server;
     public static $apiKey;
@@ -155,7 +165,7 @@ class Dataverse {
         self::curl_close();
 
         $output_array = json_decode(json_encode($output), 1);
-        return $output;
+        return json_encode($output);
     }
 
     /**
@@ -214,6 +224,5 @@ class Dataverse {
         return self::curl_exec($data, "DELETE");
     }
 }
-
 
 ?>
