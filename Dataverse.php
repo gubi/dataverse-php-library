@@ -4,7 +4,7 @@
  *
  * PHP Version 7.2.11
  *
- * @copyright 
+ * @copyright
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
@@ -169,6 +169,12 @@ class Dataverse {
 
     /* ---------------------------------------------------------------------- */
 
+    public static function check($variable_name, $param) {
+        if(!isset($param)) {
+            print "ERROR: MISSING {$variable_name}";
+            exit();
+        }
+    }
 
     /**
      * GET API contents
