@@ -147,7 +147,7 @@ class Admin extends Dataverse\Request_handler {
      * @method GET
      */
     public static function get_roles() {
-        return parent::get("api/admin/roles");
+        return parent::get("admin/roles");
     }
 
     /**
@@ -158,7 +158,7 @@ class Admin extends Dataverse\Request_handler {
      * @method POST
      */
     public static function create_role() {
-        return parent::post("api/admin/roles");
+        return parent::post("admin/roles");
     }
 
     /**
@@ -169,7 +169,7 @@ class Admin extends Dataverse\Request_handler {
      * @method GET
      */
     public static function get_users() {
-        return parent::get("api/admin/list-users");
+        return parent::get("admin/list-users");
     }
 
     /**
@@ -182,7 +182,7 @@ class Admin extends Dataverse\Request_handler {
      * @param string                            $identifier                     The user identifier (without the "@" sign)
      */
     public static function get_user($identifier) {
-        return parent::get("api/admin/authenticatedUsers/{$identifier}");
+        return parent::get("admin/authenticatedUsers/{$identifier}");
     }
 
     /**
@@ -192,7 +192,7 @@ class Admin extends Dataverse\Request_handler {
      * @method POST
      */
     public static function create_user() {
-        return parent::post("api/admin/authenticatedUsers");
+        return parent::post("admin/authenticatedUsers");
     }
 
     /**
