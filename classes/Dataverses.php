@@ -57,7 +57,7 @@ class Dataverses extends Dataverse\Request_handler {
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
      */
-    public static function delete() {
+    public static function delete($id) {
         parent::check("\$id", $id);
         return parent::delete("dataverses/{$id}");
     }
@@ -99,7 +99,7 @@ class Dataverses extends Dataverse\Request_handler {
      *
      * @param string                            $id                             A dataverse id (long) or a dataverse alias (more robust)
      */
-    public static function list_facets() {
+    public static function list_facets($id) {
         parent::check("\$id", $id);
         return parent::get("dataverses/{$id}/facets");
     }

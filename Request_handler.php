@@ -157,7 +157,7 @@ class Request_handler {
         if ($output === false) {
             $output = json_decode(curl_error(self::$ch));
         } else {
-            $output->headers = curl_getinfo(self::$ch);
+            $output->headers = json_decode(json_encode(curl_getinfo(self::$ch)));
             $output = self::move_to_top($output, "headers");
             $output = self::move_to_top($output, "status");
         }
