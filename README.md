@@ -1,5 +1,7 @@
 # Dataverse PHP API wrapper
 
+[![Dataverse Project logo](http://dataverse.org/files/dataverseorg/files/dataverse_project_logo-hp.png "Dataverse Project")](http://dataverse.org)
+
 This project is a PHP wrapper around the [Dataverse API](http://guides.dataverse.org/en/4.2/api/).
 
 ## Install
