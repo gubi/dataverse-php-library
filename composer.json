@@ -1,0 +1,14 @@
+{
+    "name": "dataverse/php-library",
+    "description": "A PHP wrapper around the Dataverse API",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "gubi",
+            "email": "gubi.ale@iod.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
