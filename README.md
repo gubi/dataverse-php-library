@@ -8,7 +8,8 @@ This project is a PHP wrapper around the [Dataverse API](http://guides.dataverse
 
 ### Dependencies
 
-This project requires PHP 7.2+ to run. Additionally you must install following dependencies:
+This project requires PHP 7.2+ to run.<br />
+Additionally you must install following dependencies:
 
 #### PHP dependencies
 *	php-curl
