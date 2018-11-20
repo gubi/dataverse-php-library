@@ -19,7 +19,9 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Info extends Dataverse\Request_handler {
+// namespace Dataverse;
+
+class Info extends Request_handler {
     /**
      * Show Dataverse Version and Build Number
      *
@@ -28,7 +30,7 @@ class Info extends Dataverse\Request_handler {
      * @method GET
      */
     public static function version() {
-        return self::get("info/version");
+        return Request_handler::get("info/version");
     }
 
     /**
@@ -39,7 +41,7 @@ class Info extends Dataverse\Request_handler {
      * @method GET
      */
     public static function server_name() {
-        return parent::get("info/server");
+        return Request_handler::get("info/server");
     }
 
     /**
@@ -50,7 +52,7 @@ class Info extends Dataverse\Request_handler {
      * @method GET
      */
     public static function get_custom_popup_text() {
-        return parent::get("info/settings/:DatasetPublishPopupCustomText");
+        return Request_handler::get("info/settings/:DatasetPublishPopupCustomText");
     }
 
     /**
@@ -61,7 +63,7 @@ class Info extends Dataverse\Request_handler {
      * @method GET
      */
     public static function get_api_terms() {
-        return parent::get("info/apiTermsOfUse");
+        return Request_handler::get("info/apiTermsOfUse");
     }
 }
 ?>

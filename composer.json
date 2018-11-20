@@ -9,6 +9,5 @@
             "email": "gubi.ale@iod.io"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "minimum-stability": "stable"
 }

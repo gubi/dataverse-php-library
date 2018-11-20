@@ -19,7 +19,9 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Builtin_users extends Dataverse\Request_handler {
+// namespace Dataverse;
+
+class Builtin_users extends Request_handler {
     /**
      * Create a Builtin User
      *
@@ -36,7 +38,7 @@ class Builtin_users extends Dataverse\Request_handler {
     public static function create_builtin_user($new_password, $builtin_users_key) {
         parent::check("\$new_password", $new_password);
         parent::check("\$builtin_users_key", $builtin_users_key);
-        return parent::post("builtin-users?password={$new_password}&key={$builtin_users_key}&file=user-add.json");
+        return Request_handler::post("builtin-users?password={$new_password}&key={$builtin_users_key}&file=user-add.json");
     }
 }
 ?>

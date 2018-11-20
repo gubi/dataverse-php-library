@@ -19,7 +19,9 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Groups extends Dataverse\Request_handler {
+// namespace Dataverse;
+
+class Groups extends Request_handler {
     /**
      * Create New Explicit Group
      *
@@ -32,7 +34,7 @@ class Groups extends Dataverse\Request_handler {
      */
     public static function create_group($id) {
         parent::check("\$id", $id);
-        return parent::post("dataverses/{$id}/groups");
+        return Request_handler::post("dataverses/{$id}/groups");
     }
 
     /**
@@ -45,7 +47,7 @@ class Groups extends Dataverse\Request_handler {
      */
     public static function list_groups($id) {
         parent::check("\$id", $id);
-        return parent::get("dataverses/{$id}/groups");
+        return Request_handler::get("dataverses/{$id}/groups");
     }
 
     /**
@@ -60,7 +62,7 @@ class Groups extends Dataverse\Request_handler {
     public static function get_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        return parent::get("dataverses/{$id}/groups/{$groupAlias}");
+        return Request_handler::get("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -77,7 +79,7 @@ class Groups extends Dataverse\Request_handler {
     public static function update_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        return parent::put("dataverses/{$id}/groups/{$groupAlias}");
+        return Request_handler::put("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -92,7 +94,7 @@ class Groups extends Dataverse\Request_handler {
     public static function delete_group($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        return parent::delete("dataverses/{$id}/groups/{$groupAlias}");
+        return Request_handler::delete("dataverses/{$id}/groups/{$groupAlias}");
     }
 
     /**
@@ -108,7 +110,7 @@ class Groups extends Dataverse\Request_handler {
     public static function add_group_roles($id, $groupAlias) {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
-        return parent::post("dataverses/{$id}/groups/{$groupAlias}/roleAssignees");
+        return Request_handler::post("dataverses/{$id}/groups/{$groupAlias}/roleAssignees");
     }
 
     /**
@@ -126,7 +128,7 @@ class Groups extends Dataverse\Request_handler {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
         parent::check("\$roleAssigneeIdentifier", $roleAssigneeIdentifier);
-        return parent::put("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
+        return Request_handler::put("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
 
     }
 
@@ -145,7 +147,7 @@ class Groups extends Dataverse\Request_handler {
         parent::check("\$id", $id);
         parent::check("\$groupAlias", $groupAlias);
         parent::check("\$roleAssigneeIdentifier", $roleAssigneeIdentifier);
-        return parent::delete("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
+        return Request_handler::delete("dataverses/{$id}/groups/{$groupAlias}/roleAssignees/{$roleAssigneeIdentifier}");
     }
 }
 ?>

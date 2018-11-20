@@ -19,7 +19,9 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-class Metadata_blocks extends Dataverse\Request_handler {
+// namespace Dataverse;
+
+class Metadata_blocks extends Request_handler {
     /**
      * Show Info About All Metadata Blocks
      *
@@ -28,7 +30,7 @@ class Metadata_blocks extends Dataverse\Request_handler {
      * @method GET
      */
     public static function get_all_metadata_info() {
-        return parent::get("metadatablocks");
+        return Request_handler::get("metadatablocks");
     }
 
     /**
@@ -42,7 +44,7 @@ class Metadata_blocks extends Dataverse\Request_handler {
      */
     public static function get_metadata_info($identifier) {
         parent::check("\$identifier", $identifier);
-        return parent::get("metadatablocks/{$identifier}");
+        return Request_handler::get("metadatablocks/{$identifier}");
     }
 }
 ?>
