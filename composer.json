@@ -6,8 +6,20 @@
     "authors": [
         {
             "name": "gubi",
-            "email": "gubi.ale@iod.io"
+            "email": "a,gubitosi@cgiar.org"
         }
     ],
-    "minimum-stability": "stable"
+    "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "7.2.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Dataverse\\": "src/"
+        }
+    }
 }
