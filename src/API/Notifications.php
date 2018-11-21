@@ -19,7 +19,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
-// namespace Dataverse;
+namespace Dataverse\API;
 
 class Notifications extends Request_handler {
     /**

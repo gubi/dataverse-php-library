@@ -18,6 +18,7 @@
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
 
+namespace Dataverse;
 
 // Suppress PHP Warning: "Declaration of ... should be compatible with ... in ... on line 0"
 if(PHP_MAJOR_VERSION >= 7) { set_error_handler(function ($errno, $errstr) { return strpos($errstr, 'Declaration of') === 0; }, E_WARNING); }
