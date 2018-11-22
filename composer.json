@@ -23,10 +23,10 @@
     },
     "require": {
         "php": ">=7.2",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-xml": "*",
-        "ext-zip": "*"
+        "php-curl": "*",
+        "php-json": "*",
+        "php-xml": "*",
+        "php-zip": "*"
     },
     "autoload": {
         "psr-4": {
