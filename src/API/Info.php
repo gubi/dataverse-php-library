@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Info extends Request_handler {
+class Info extends \Dataverse\Request_handler {
     /**
      * Show Dataverse Version and Build Number
      *

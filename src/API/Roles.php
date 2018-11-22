@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Roles extends Request_handler {
+class Roles extends \Dataverse\Request_handler {
     /**
      * Create a New Role in a Dataverse
      *

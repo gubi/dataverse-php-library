@@ -39,7 +39,7 @@ class Request_handler {
      * @return object                                                           A JSON decoded output
     */
     public static function get($url) {
-        return cURL::cli_exec("GET", $url);
+        return API\cURL::cli_exec("GET", $url);
     }
 
     /**
@@ -49,7 +49,7 @@ class Request_handler {
      * @return object                                                           A JSON decoded output
     */
     public static function post($url, $post_data) {
-        return cURL::cli_exec("POST", $url, $post_data);
+        return API\cURL::cli_exec("POST", $url, $post_data);
     }
 
     /**
@@ -59,7 +59,7 @@ class Request_handler {
      * @return object                                                           A JSON decoded output
     */
     public static function put($url, $post_data) {
-        return cURL::cli_exec("PUT", $url, $post_data);
+        return API\cURL::cli_exec("PUT", $url, $post_data);
     }
 
     /**
@@ -69,7 +69,7 @@ class Request_handler {
      * @return object                                                           A JSON decoded output
     */
     public static function delete($url, $post_data) {
-        return cURL::cli_exec("DELETE", $url, $post_data);
+        return API\cURL::cli_exec("DELETE", $url, $post_data);
     }
 }
 

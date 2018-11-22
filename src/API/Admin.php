@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Admin extends Request_handler {
+class Admin extends \Dataverse\Request_handler {
     /**
      * List All Database Settings
      *

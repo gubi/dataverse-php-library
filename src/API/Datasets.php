@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Datasets extends Request_handler {
+class Datasets extends \Dataverse\Request_handler {
     /**
      * Get JSON Representation of a Dataset
      *

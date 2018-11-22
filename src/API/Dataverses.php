@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Dataverses extends Request_handler {
+class Dataverses extends \Dataverse\Request_handler {
     /**
      * Create a Dataverse
      *

@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Builtin_users extends Request_handler {
+class Builtin_users extends \Dataverse\Request_handler {
     /**
      * Create a Builtin User
      *

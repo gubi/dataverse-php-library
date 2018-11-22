@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Files extends Request_handler {
+class Files extends \Dataverse\Request_handler {
     /**
      * Adding Files
      * NOTE: Files can be added via the native API but the operation is performed on the parent object, which is a dataset.

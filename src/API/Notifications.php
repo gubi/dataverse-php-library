@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Notifications extends Request_handler {
+class Notifications extends \Dataverse\Request_handler {
     /**
      * Get All Notifications by User
      *

@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class cURL extends Request_handler {
+class cURL extends \Dataverse\Request_handler {
     private static $ch;
     public static $apiKey;
     public static $api_url;
@@ -59,7 +59,7 @@ class cURL extends Request_handler {
             exit();
         }
         if(!isset(self::$api_url)) {
-            print "ERROR: NO SERVER DEFINED\nPlease provide a Server address";
+            print "ERROR: NO SERVER DEFINED\nPlease provide a Dataverse Server address";
             exit();
         }
 

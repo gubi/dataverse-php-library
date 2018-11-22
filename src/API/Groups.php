@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Groups extends Request_handler {
+class Groups extends \Dataverse\Request_handler {
     /**
      * Create New Explicit Group
      *

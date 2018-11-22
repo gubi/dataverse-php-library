@@ -1,8 +1,12 @@
 {
     "name": "dataverse/php-library",
     "description": "A PHP wrapper around the Dataverse API",
+    "homepage": "https://github.com/gubi/dataverse-php-library",
     "type": "library",
     "license": "GPL-3.0-or-later",
+    "keywords": [
+        "dataverse", "api", "php", "library"
+    ],
     "authors": [
         {
             "name": "gubi",
@@ -16,6 +20,13 @@
         },
         "optimize-autoloader": true,
         "sort-packages": true
+    },
+    "require": {
+        "php": ">=7.2",
+        "ext-curl:": "*",
+        "ext-json:": "*",
+        "ext-xml:": "*",
+        "ext-zip:": "*"
     },
     "autoload": {
         "psr-4": {

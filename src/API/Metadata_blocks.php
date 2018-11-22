@@ -21,7 +21,7 @@
 
 namespace Dataverse\API;
 
-class Metadata_blocks extends Request_handler {
+class Metadata_blocks extends \Dataverse\Request_handler {
     /**
      * Show Info About All Metadata Blocks
      *
