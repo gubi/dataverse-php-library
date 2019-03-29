@@ -63,7 +63,7 @@ class Request_handler {
     }
 
     /**
-     * PUT API contents
+     * DELETE API contents
      *
      * @param  string                           $url                            The given URL part
      * @return object                                                           A JSON decoded output
